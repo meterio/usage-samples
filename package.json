@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "meterify": "^1.4.4",
     "@meterio/devkit": "^1.2.6",
     "@meterio/flex-framework": "^0.4.10",
     "axios": "^0.19.2",
