@@ -8,10 +8,10 @@ const web3 = meterify(new Web3(), config.url);
 const account = web3.eth.accounts.privateKeyToAccount(config.pk);
 const { address } = account;
 
-web3.eth.accounts.wallet.add(config.pk);
+// web3.eth.accounts.wallet.add(config.pk);
 const tx = {
   from: address,
-  to: '0x03aa4784c850265fdc4260412c80d2551f329e0c', // alice
+  to: '0xbf85ef4216340eb5cd3c57b550aae7a2712d48d2', // alice
 
   // actual meter = value * 10e-18
   value: '199' + '0'.repeat(18), // 0.1 MTR
