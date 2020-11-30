@@ -83,7 +83,7 @@ const verifySysContractClause = async (tx, clauseIndex)=>{
 
 (async ()=>{
     // use a specific block to demonstrate tx filter & verify for system contract
-    const blk = await web3.eth.getBlock(5165321); // 5165321 MTRG sample tx
+    const blk = await web3.eth.getBlock(5252087); // 5252087 MTRG sample tx, 5252023 MTR sample tx
 
     // loop through all txs
     for (const txHash of blk.transactions){
