@@ -1,7 +1,7 @@
 const { cry, Transaction } = require('@meterio/devkit');
 const axios = require('axios');
-
-const config = require('./config.json');
+const utils = require('../utils');
+const { config } = utils;
 
 // read private key from file
 const pkBuffer = Buffer.from(config.pk.replace('0x', ''), 'hex');
@@ -21,7 +21,7 @@ let getRandomInt = () => {
     expiration: 48, // blockRefHeight + expiration is the height for tx expire
     clauses: [
       {
-        to: '0xbf85ef4216340eb5cd3c57b550aae7a2712d48d2', // alice
+        to: config.alice, // alice
         value: '1' + '0'.repeat(17), // 0.1 MTR
         data: '0x',
         token: '00', // 00 - MTR, 01 - MTRG

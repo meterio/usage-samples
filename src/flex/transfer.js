@@ -1,11 +1,6 @@
-const {
-  Framework,
-  Driver,
-  SimpleNet,
-  SimpleWallet,
-} = require('@meterio/flex-framework');
-
-const config = require('./config.json');
+const { Framework, Driver, SimpleNet, SimpleWallet } = require('@meterio/flex-framework');
+const utils = require('../utils');
+const { config } = utils;
 
 (async () => {
   const wallet = new SimpleWallet();
@@ -26,25 +21,23 @@ const config = require('./config.json');
 
   const signingService = flex.vendor.sign('tx');
 
-  const recipient1 = '0xbf85ef4216340eb5cd3c57b550aae7a2712d48d2'; // alice
-  const recipient2 = '0xf3dd5c55b96889369f714143f213403464a268a6'; // bob
   const cluases = [
     {
-      to: recipient1,
+      to: config.alice,
       value: '2' + '0'.repeat(18),
       data: '0x',
       token: 1,
       comment: 'Transfer 2 MTRG',
     },
     {
-      to: recipient1,
+      to: config.alice,
       value: '1' + '0'.repeat(18),
       data: '0x',
       token: 0,
       comment: 'Transfer 1 MTR',
     },
     {
-      to: recipient2,
+      to: config.bob,
       value: '3' + '0'.repeat(18),
       data: '0x',
       token: 1,
