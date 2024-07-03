@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const blockNumber = 56852510;
-const baseUrl = `http://mainnet.meter.io`;
+const baseUrl = `https://mainnet.meter.io`;
 
 (async () => {
   let transfers = [];

@@ -1,7 +1,7 @@
 import requests
 
-baseUrl = 'http://mainnet.meter.io'
-blockNumber =56852510 
+baseUrl = 'https://mainnet.meter.io'
+blockNumber = 56852510 
 
 res = requests.get(f"{baseUrl}/blocks/{blockNumber}")
 print(res.json())
